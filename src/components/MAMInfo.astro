@@ -1,0 +1,37 @@
+---
+import { getCollection } from "astro:content";
+const projects = await getCollection("information");
+---
+
+<div class="flex flex-col justify-center items-center">
+  <div class="w-1/2">
+    <p class="text-lg mb-20 mt-10 introduction max-w-2xl mx-auto">
+      At MAM we believe in the power of collaboration and continuous learning.
+      We are a community passionate about web development and programming in
+      general, where professionals, students and enthusiasts of all levels come
+      together to create, innovate and share knowledge.
+    </p>
+    
+    <p class="text-center font-bold text-primary text-5xl mb-4">
+      WHAT WE DO IN MAM?
+    </p>
+  </div>
+  <div class="flex w-10/12 gap-4">
+    {
+      projects.map((project: any) => {
+        const { slug, data } = project;
+        const { name, description, url } = data;
+        console.log(data);
+
+        return (
+          <div class="border-2 border-secondary p-4 rounded-xl">
+            <h1 class="text-primary font-bold text-2xl text-center mb-2">
+              {name}
+            </h1>
+            <p class="text-lg">{description}</p>
+          </div>
+        );
+      })
+    }
+  </div>
+</div>

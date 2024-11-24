@@ -1,0 +1,42 @@
+---
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/png" href="/public/MAM.png" sizes="32x32"/>
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
+<style is:global>
+  @import url("https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&family=Hind:wght@300;400;500;600;700&display=swap");
+  html {
+    font-family: system-ui, sans-serif;
+    color: white;
+    background: #13151a;
+  }
+  body {
+    background: linear-gradient(
+      0deg,
+      rgba(19, 21, 26, 1) 20%,
+      rgba(29, 46, 56, 1) 100%
+    );
+
+    font-family: "Hind", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+  }
+</style>
+<!-- #13151a -->

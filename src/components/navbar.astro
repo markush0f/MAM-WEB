@@ -1,0 +1,45 @@
+---
+const dataNavBar = [
+  {
+    name: "Info",
+    url: "/",
+  },
+  {
+    name: "About",
+    url: "/about",
+  },
+  {
+    name: "Projects",
+    url: "/blog",
+  },
+];
+---
+
+<nav class="mr-5 ml-5 flex items-center justify-between pt-4">
+  <ul
+    class="flex justify-start gap-10 border p-3 rounded-full border-secondary px-6"
+  >
+    {
+      dataNavBar.map((item) => (
+        <li>
+          <a
+            href={item.url}
+            class=" text-xl text-tertiary hover-text hover:opacity-60"
+          >
+            {item.name}
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+
+  <ul class="flex justify-end gap-4 items-center p-3">
+    <img src="/public/icons/language.svg" alt="" class="w-8 cursor-pointer" />
+  </ul>
+</nav>
+
+<style>
+  .hover-text {
+    transition: opacity 0.3s ease;
+  }
+</style>
