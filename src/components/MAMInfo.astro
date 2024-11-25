@@ -11,12 +11,14 @@ const projects = await getCollection("information");
       general, where professionals, students and enthusiasts of all levels come
       together to create, innovate and share knowledge.
     </p>
-    
+
     <p class="text-center font-bold text-primary text-5xl mb-4">
       WHAT WE DO IN MAM?
     </p>
   </div>
-  <div class="flex w-10/12 gap-4">
+  <div
+    class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-10/12 mx-auto"
+  >
     {
       projects.map((project: any) => {
         const { slug, data } = project;
@@ -24,11 +26,9 @@ const projects = await getCollection("information");
         console.log(data);
 
         return (
-          <div class="border-2 border-secondary p-4 rounded-xl">
-            <h1 class="text-primary font-bold text-2xl text-center mb-2">
-              {name}
-            </h1>
-            <p class="text-lg">{description}</p>
+          <div class="border-2 border-secondary p-6 rounded-xl transition-all duration-300 hover:shadow-lg hover:scale-105 ">
+            <h1 class="text-primary font-bold text-2xl text-center">{name}</h1>
+            <p class="text-lg text-gray-400 leading-relaxed ">{description}</p>
           </div>
         );
       })

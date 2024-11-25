@@ -1,5 +1,5 @@
 ---
 name: "Shared Learning"
-description: "We work together to develop web applications and projects that solve real problems and encourage hands-on learning."
+description: "At MAM, learning is a team effort. Through Shared Learning, our community exchanges knowledge, explores new ideas, and supports each other in mastering programming and web development."
 url: "null"
 ---

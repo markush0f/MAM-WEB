@@ -1,5 +1,5 @@
 ---
 name: "Support Nerwork"
-description: "Here you will find a safe space to ask questions, learn and grow with people with similar interests."
+description: "At MAM, you can find solutions and support.Here, you’ll discover a safe space to ask questions, learn new skills, and grow alongside others with similar interests and passions for programming"
 url: "null"
 ---
