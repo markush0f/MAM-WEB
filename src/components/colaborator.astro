@@ -1,0 +1,40 @@
+---
+export interface Props {
+  name: string;
+  description: string;
+  github: string;
+  image: string;
+  linkedin: string;
+}
+const { name, description, github, image, linkedin } = Astro.props;
+---
+
+<div
+  class="flex items-center border border-primary p-2 rounded-lg w-full max-w-60 m-6"
+>
+  <img
+    src={image}
+    alt={`Foto de ${name}`}
+    class="w-16 h-16 rounded-full mr-4"
+  />
+  <div class="flex flex-col">
+    <h1 class="text-lg font-semibold opacity-75">{name}</h1>
+    <!-- <h2 class="text-primary">{description}</h2> -->
+    <div class="flex space-x-4 my-1 ml-4">
+      <a href={github} target="_blank">
+        <img
+          src="/public/icons/github-dark.svg"
+          alt="GitHub"
+          class="w-7 hover:scale-110"
+        />
+      </a>
+      <a href={linkedin} target="_blank">
+        <img
+          src="/public/icons/linkedin.svg"
+          alt="LinkedIn"
+          class="w-7 hover:scale-110"
+        />
+      </a>
+    </div>
+  </div>
+</div>

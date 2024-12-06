@@ -1,0 +1,46 @@
+---
+import Navbar from "../components/navbar.astro";
+import Layout from "../layouts/Layout.astro";
+import Colaborator from "../components/colaborator.astro";
+
+type Colaborator = {
+  name: string;
+  description: string;
+  github: string;
+  image: string;
+  linkedin: string;
+};
+
+const colaborators: Colaborator[] = [
+  {
+    name: "markush0f",
+    description: "Description...",
+    github: "github",
+    image: "https://avatars.githubusercontent.com/u/160970867?v=4",
+    linkedin: "linkedin",
+  },
+];
+---
+
+<Layout title="Colaborators">
+  <Navbar />
+  <div class="flex flex-col place-items-center justify-center">
+    <img src="/MAM.png" alt="mam-logo" class="w-52" />
+  </div>
+  <h1 class="text-7xl font-extrabold mt-10 text-primary text-center">
+    COLABORATORS
+  </h1>
+  <div>
+    {
+      colaborators.map((colaborator) => (
+        <Colaborator
+          name={colaborator.name.toLocaleUpperCase()}
+          description={colaborator.description}
+          github={colaborator.github}
+          image={colaborator.image}
+          linkedin={colaborator.linkedin}
+        />
+      ))
+    }
+  </div>
+</Layout>

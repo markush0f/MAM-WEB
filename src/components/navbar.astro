@@ -5,17 +5,23 @@ const dataNavBar = [
     url: "/",
   },
   {
-    name: "About",
-    url: "/about",
-  },
-  {
     name: "Projects",
     url: "/blog",
+  },
+  {
+    name: "Colaborators",
+    url: "/colaborators",
+  },
+  {
+    name: "About",
+    url: "/contact",
   },
 ];
 ---
 
-<nav class="mr-5 ml-5 flex items-center justify-between pt-4">
+<nav
+  class="fixed top-0 left-0 w-full flex items-center justify-between pt-4 px-5"
+>
   <ul
     class="flex justify-start gap-10 border p-3 rounded-full border-secondary px-6"
   >
@@ -24,7 +30,7 @@ const dataNavBar = [
         <li>
           <a
             href={item.url}
-            class=" text-xl text-tertiary hover-text hover:opacity-60"
+            class="text-xl text-tertiary hover-text hover:opacity-60"
           >
             {item.name}
           </a>
@@ -34,7 +40,11 @@ const dataNavBar = [
   </ul>
 
   <ul class="flex justify-end gap-4 items-center p-3">
-    <img src="/public/icons/language.svg" alt="" class="w-8 cursor-pointer" />
+    <img
+      src="/public/icons/language.svg"
+      alt="Change Language"
+      class="w-8 cursor-pointer"
+    />
   </ul>
 </nav>
 
